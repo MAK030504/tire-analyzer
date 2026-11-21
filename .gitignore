@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Secrets and local environment files
+.env
+.env.*
+!.env.example
+kaggle.json
+**/.kaggle/
+
+# Datasets (download locally; do not commit)
+backend/data/
+backend/converted_dataset/
+**/datasets/
+
+# Model weights
+*.pt
+*.pth
+*.onnx
+*.ckpt
+*.h5
+*.pkl
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+
+# Editors and OS
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
