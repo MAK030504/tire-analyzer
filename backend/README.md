@@ -1,27 +1,16 @@
-# Tire Analyzer Backend
+# Tire Analyzer API
 
-Simple FastAPI backend for the tire analyzer prototype.
+Dataset download, training, Docker, and the recorded validation accuracy are documented in the [repository README](../README.md).
 
-## Setup
-
-1. Create and activate a virtual environment (optional but recommended).
-2. Install dependencies:
+From this directory:
 
 ```bash
+python -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
-```
-
-3. Run the development server:
-
-```bash
 uvicorn app:app --reload --host 0.0.0.0 --port 8000
 ```
 
-4. Open the landing page in your browser:
+`GET /health` returns `{"status":"ok"}`. `POST /analyze` accepts a multipart image in the form field `file`.
 
-```text
-http://localhost:8000/
-```
-
-This will let you upload a tire image and see the dummy analysis result in JSON.
-
+`TIRE_MODEL_DIR` overrides the weights directory (default: `models/` next to `app.py`).
